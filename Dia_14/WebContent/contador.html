@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador para Data Especial</title>
+    <style>
+        body { text-align: center; background-color: #ffe6f2; color: #d63384; font-family: Arial; }
+        .container { padding: 20px; max-width: 600px; margin: auto; background: white; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); }
+         a {
+            display: inline-block;
+            background: #d63384;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        a :hover {
+            background: #b02a6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador para o Nosso Dia Especial ⏳</h1>
+        <p id="contador"></p>
+        <a href="index.html">Voltar</a>
+    </div>
+    <script>
+        function atualizarContador() {
+            const dataEspecial = new Date("2025-03-06");
+            const hoje = new Date();
+            const diferenca = dataEspecial - hoje;
+            const dias = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+            document.getElementById("contador").innerText = `Faltam ${dias} dias! 💕`;
+        }
+        atualizarContador();
+    </script>
+</body>
+</html>
